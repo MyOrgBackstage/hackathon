@@ -21,18 +21,18 @@ pipeline {
             }
         }
 
-        stage('Install Terraform') {
-            steps {
-                script {
-                    // Install Terraform if it's not installed (can be skipped if pre-installed)
-                    sh '''
-                    wget https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip
-                    unzip terraform_${TERRAFORM_VERSION}_linux_amd64.zip
-                    mv terraform /usr/local/bin/
-                    '''
-                }
-            }
-        }
+        // stage('Install Terraform') {
+        //     steps {
+        //         script {
+        //             // Install Terraform if it's not installed (can be skipped if pre-installed)
+        //             sh '''
+        //             wget https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip
+        //             unzip terraform_${TERRAFORM_VERSION}_linux_amd64.zip
+        //             mv terraform /usr/local/bin/
+        //             '''
+        //         }
+        //     }
+        // }
 
         stage('Terraform Init') {
             steps {
