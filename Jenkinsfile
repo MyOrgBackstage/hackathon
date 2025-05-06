@@ -25,6 +25,7 @@ pipeline {
             steps {
                 script {
                     // Install Terraform if it's not installed (can be skipped if pre-installed)
+                        sh 'sudo rm -f /usr/local/bin/terraform'
                         sh 'curl -LO https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip'
                         sh 'unzip terraform_${TERRAFORM_VERSION}_linux_amd64.zip'
                         sh 'sudo mv terraform /usr/local/bin/'
