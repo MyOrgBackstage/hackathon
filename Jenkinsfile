@@ -29,6 +29,7 @@ pipeline {
                         sh 'rm terraform_${TERRAFORM_VERSION}_linux_amd64.zip'
                         sh 'curl -LO https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip'
                         sh 'unzip -o terraform_${TERRAFORM_VERSION}_linux_amd64.zip'
+                        sh 'sudo chmod u+w /usr/local/bin'
                         sh 'sudo mv terraform /usr/local/bin/'
                 }
             }
