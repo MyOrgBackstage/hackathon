@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        TERRAFORM_VERSION = '1.3.0'  // Specify the Terraform version you need
+        TERRAFORM_VERSION = '1.4.0'  // Specify the Terraform version you need
         ARM_SUBSCRIPTION_ID = "${env.AZURE_SUBSCRIPTION_ID}"
         ARM_CLIENT_ID = "${env.AZURE_CLIENT_ID}"
         ARM_CLIENT_SECRET = "${env.AZURE_CLIENT_SECRET}"
